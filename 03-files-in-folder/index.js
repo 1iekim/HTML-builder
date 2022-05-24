@@ -20,7 +20,7 @@ async function redProm() {
     
     fs.stat(timeWay, (err, st) => {
       let fullname = arrFile[arrFile.indexOf(file.name)];
-      let name = fullname.slice(0,-4);
+      let name = fullname.slice(0, file.name.lastIndexOf('.'));
       let dirent = fullname.slice(file.name.lastIndexOf('.')+1);
     
       console.log(`${name} - ${dirent} - ${st.size}`);
